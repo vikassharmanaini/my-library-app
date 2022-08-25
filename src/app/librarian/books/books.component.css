@@ -1,0 +1,25 @@
+.grid-container {
+  margin: 20px;
+}
+.mat-list-item{
+  width: 100%;
+}  
+.mat-list-item span{
+    margin: auto;
+}
+.id{
+  float: left;
+}
+.popularity{
+  float: right;
+}
+.title{
+    font-weight: 600;
+    font-size: 0.6;
+}
+.addbook,.addbook mat-icon{
+  border: solid black 2px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}

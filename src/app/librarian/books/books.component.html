@@ -1,0 +1,25 @@
+<div class="grid-container">
+    <h1 class="mat-h1">Book Shelf</h1>
+    <mat-card>
+        <mat-list>
+            <mat-list-item class="addbook">
+                <mat-icon>add</mat-icon>
+                <span>Add New Book</span>
+            </mat-list-item>
+            <mat-list-item class="title">
+                <span class="id">Book Id </span>
+                <span class="name"> Book name </span>
+                <span class="popularity"> Popularity </span>
+                <span class="action">Open</span>
+                <mat-divider></mat-divider>
+            </mat-list-item>
+            <mat-list-item *ngFor="let item of book">
+                <span class="id">{{item.id}}</span>
+                <span class="name">{{item.name}}</span>
+                <span class="popularity">{{item.popularity}}</span>
+                <span class="action"><button mat-icon-button color="primary"><mat-icon>visibility</mat-icon></button></span>
+                <mat-divider></mat-divider>
+            </mat-list-item>
+        </mat-list>
+    </mat-card>
+</div>

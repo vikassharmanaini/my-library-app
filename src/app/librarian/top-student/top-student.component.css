@@ -1,0 +1,13 @@
+.grid-container{
+    margin: 20px;
+}
+.mat-list-item span{
+    margin: auto;
+}
+.rank{
+    float: left;
+}
+.button{
+    float: right;
+    width: 5px;
+}

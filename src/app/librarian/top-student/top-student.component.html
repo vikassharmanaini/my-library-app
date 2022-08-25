@@ -1,0 +1,23 @@
+<div class="grid-container">
+    <h1 class="mat-h1">Rankers</h1>
+    <mat-card>
+        <mat-list>
+            <mat-list-item>
+                <span class="rank">Rank</span>
+                <span>Image</span>
+                <span class="name">Name</span>
+                <span class="rank">Point</span>
+                <span class="button"><button mat-icon-button>see</button></span>
+                <mat-divider></mat-divider>
+            </mat-list-item>
+            <mat-list-item *ngFor="let item of student let i=index">
+                <span class="rank">{{i+1}}</span>
+                <span><img [src]="item.img" mat-card-avatar> </span>
+                <span class="name">{{item.name}}</span>
+                <span class="rank">{{item.rank}}</span>
+                <span class="button"><button mat-icon-button>see</button></span>
+                <mat-divider></mat-divider>
+            </mat-list-item>
+        </mat-list>
+    </mat-card>
+</div>

@@ -1,0 +1,16 @@
+<div class="grid-container">
+    <h1 class="mat-h1">Notice</h1>
+    <mat-accordion>
+        <mat-expansion-panel *ngFor="let item of notice">
+            <mat-expansion-panel-header>
+                <span class="notice-title">
+                    {{item.title}}
+                </span>
+                <span mat-card-subtitle>
+                    {{item.date}}
+                </span>
+            </mat-expansion-panel-header>
+            {{item.description}}
+        </mat-expansion-panel>
+    </mat-accordion>
+</div>

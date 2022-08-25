@@ -1,0 +1,35 @@
+<mat-toolbar color="primary">
+  <button
+    type="button"
+    aria-label="Toggle sidenav"
+    mat-icon-button
+    (click)="drawer.toggle()"
+    *ngIf="isHandset$ | async">
+    <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+  </button>
+  <span>G.P.L. Library Admin</span>
+</mat-toolbar>
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav-content>
+  <router-outlet></router-outlet>
+  </mat-sidenav-content>
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-toolbar class="tool">
+      <img src="../../favicon.ico" mat-card-avatar>
+      <span class="mat-h3">name last name</span>
+    </mat-toolbar>
+    <mat-divider></mat-divider>
+    <mat-nav-list>
+      <a mat-list-item routerLink="dashboard"><mat-icon>dashboard</mat-icon> <span>Dashboard</span></a>
+      <a mat-list-item routerLink="books"><mat-icon>book</mat-icon><span>Add Book</span></a>
+      <a mat-list-item routerLink="rankers"><mat-icon>star</mat-icon><span>Top Learners</span></a>
+      <a mat-list-item routerLink="notice"><mat-icon>note_add</mat-icon><span>Notice</span></a>
+      <a mat-list-item routerLink="profile"><mat-icon>account_circle</mat-icon><span>Profile</span></a>
+      <mat-divider></mat-divider>
+      <button mat-raised-button color="warn" (click)="submit()">Log out</button>
+    </mat-nav-list>
+  </mat-sidenav>
+</mat-sidenav-container>
